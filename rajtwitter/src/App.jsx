@@ -1,12 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import { Explore } from "./pages/Explore";
+import Grocery from './Components/Grocery';
+//import { Explore } from "./pages/Explore";
 
 function App() {
   return (
     <div className="App">
+
        
-        <Explore />
+         <Grocery />
       
     </div>
   );
