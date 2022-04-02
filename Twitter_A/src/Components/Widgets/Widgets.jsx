@@ -3,12 +3,64 @@ import { Article } from "../Article/Article";
 import { Suggested } from "../Suggested/Suggested";
 import { Search } from "../TwitterSearch/TwitterSearch";
 import "./Widgets.css";
+import React, { useState, useCallback } from "react";
+import axios from "axios";
+import debounce from "lodash/debounce";
+import { db } from "../../Configs/firebase";
+
 export const Widgets = () => {
+    const [value, setValue] = useState("");
+    const [prof, setProf] = useState("");
+
+    
+    const handleChange = (e) => {
+        const { value } = e.target;
+        setValue(value);
+        if(value)
+        {
+            handleSearch(value);
+        }
+    };
+      //console.log(prof)
+
+        //   data.forEach(doc => {
+        //     array.push(doc.data().displayName)
+        // });  
+        // setProf(array)    //console.log(data,"DATA AT 21")
+        // var ans="an";
+        
+    
+
+      const handleSearch =  useCallback(
+        debounce(async(value) => {
+            let array = [];
+            const data = await db.collection("users").get()
+            data.forEach(doc => {
+                array.push(doc.data().displayName)
+            }); 
+            var arr = []; 
+            for(var i=0; i<array.length;i++){
+                if(array[i].includes(value)){
+                    data.forEach(doc => {
+                        if(array[i] === doc.data().displayName)
+                        {
+                            arr.push(doc.data());
+                        }
+                    });
+                }
+            }
+            setProf(arr);
+           
+        }, 1000),
+        []
+      );
+      console.log(prof);
     return(
         <div className="widgets">
 
             {/* Search Component */}
-            <Search/>
+            <input id="search" type="text" onChange={handleChange}/>
+            <div id="prof"></div>
 
             <div className="widget_cont1">
                 <h2>What's Happening</h2>
