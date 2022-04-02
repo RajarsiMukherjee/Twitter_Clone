@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 
-import './Feed.css'
+// import './Feed.css'
 
 function ElevationScroll(props) {
   const { children, window } = props;
