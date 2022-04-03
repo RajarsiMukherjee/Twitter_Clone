@@ -70,5 +70,15 @@
     height:300px;
     border-top: none;
     overflow: scroll;
-    width: 50%;
+     
+     
+}
+#Simage{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+ 
+#mainS{
+    display: flex;
 }
