@@ -16,7 +16,8 @@ import {storage} from "../../Configs/firebase";
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
 import FileUploadOutlinedIcon from '@mui/icons-material/FileUploadOutlined';
 export  function  Replies() {
- 
+   
+   const cur_user_id = JSON.parse(localStorage.getItem("userInfo"));
 
    const  [ tweetMsg, setTweetMsg ] = useState("");
    const [tweetImage, setTweetImage] = useState("");
@@ -85,7 +86,7 @@ export  function  Replies() {
     
         <div className={Style.tweetDiv}>
         
-            <div><Avatar alt="User Profile" src={userInf.displayName} style={{height:"30%", width:"50%", margin:"auto", marginTop:"30%"}}/></div>
+            <div><Avatar alt="User Profile" src={cur_user_id.avatar} style={{height:"30%", width:"50%", margin:"auto", marginTop:"30%"}}/></div>
             <div className={Style.tweetDiv2}>
                <form>
                 <div >

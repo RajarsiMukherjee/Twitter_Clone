@@ -6,13 +6,13 @@ import { Show } from '../ShowTweet/Show';
 import { Widgets } from '../Widgets/Widgets';
 import { Sidebar } from '../Sidebar/Sidebar'
 export const Profile = () => {
-    var userInf = JSON.parse(localStorage.getItem("profile"))
+    var userInf = JSON.parse(localStorage.getItem("userInfo"))
 
 
     const name = userInf.displayName
     const totalTweets = userInf.tweets;
     const username = userInf.userName;
-    const joinedDate = userInf.joinDate.second;
+    // const joinedDate = userInf.joinDate.second;
     const following = userInf.following;
     const followers = userInf.followers;
     const bio = "Mern Stack Developer"
@@ -34,14 +34,14 @@ export const Profile = () => {
                     </div>
 
                     <div className={Styles.backgroundImg}></div>
-                    <div className={Styles.profileImg}><img src={userInf.avatar} alt="" /> <button className={Styles.editProfile}>Edit Profile</button></div>
+                    <div className={Styles.profileImg}><img src={userInf.avatar ? userInf.avatar : ""} alt="" /> <button className={Styles.editProfile}>Edit Profile</button></div>
                     <div className={Styles.userDetails}>
                         <h4>{name}</h4>
                         <div className={Styles.usernameadd}><p>@{username}</p></div>
 
                         <div className="bio">{bio}<p></p></div>
 
-                        <div className={Styles.joinedDate}><CalendarMonthIcon />  <span> Joined {joinedDate}</span> </div>
+                        <div className={Styles.joinedDate}><CalendarMonthIcon />  <span> Joined {userInf.joinDate.Date}</span> </div>
 
                     </div>
 

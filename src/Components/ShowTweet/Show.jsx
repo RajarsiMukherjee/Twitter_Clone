@@ -74,7 +74,7 @@ export const Show = () => {
                 <Avatar alt="User Profile" src={el.avatar} style={{height:"75%", width:"60%", margin:"auto"}}/>
                </div>
                <div>
-                  <span style={{fontWeight:"bold",color:"black"}}>{el.displayName}</span><span style={{marginLeft:"10px",color:"black"}}>@{el.username}</span> <span>.7h</span>
+                  <span style={{fontWeight:"bold",color:"black"}}>{el.displayName}</span><span style={{marginLeft:"10px",color:"black"}}>@{el.username}</span>
                   <p style={{color:"black"}}>{el.text}</p>
                </div>
                <div><MoreHorizOutlinedIcon className={Style.logout_more} /></div>
@@ -86,7 +86,7 @@ export const Show = () => {
             <div className={Style.navShow_image}>
                 <div></div>
                 <div>
-                    {el.image ?  <img src={el.image}  className={Style.postImage} /> : ""}
+                    {el.image ?  <img src={el.image} alt =""  className={Style.postImage} /> : ""}
                     
                 </div>
             </div>

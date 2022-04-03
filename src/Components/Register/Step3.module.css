@@ -4,6 +4,7 @@
   margin: auto;
   margin-top: 3%;
   border-radius: 15px;
+  
 }
 .crosss {
   padding: 2% 0% 0% 12%;
@@ -11,7 +12,10 @@
   cursor: pointer;
   display: flex;
 }
-
+.twitterLogo{
+  height: 300px;
+  align-items: center;
+}
 .nextBtnDiv {
   text-align: center;
 
