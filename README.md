@@ -12,7 +12,7 @@ We Made This Project using React, Material Ui and also used 🔥Firebase as data
 ### Deployed Link 🚀:-    
 <br>
 
-    Deployed link
+    https://twitter-clone-ebon-sigma.vercel.app/
 
 <hr>
 <br>
