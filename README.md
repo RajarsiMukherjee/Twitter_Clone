@@ -37,13 +37,14 @@ These are the components outlined in twitter's site. All twitter's components su
 
 ### Image
 
-![alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvgu_pesNDstPRKB7ZvJurfZbqNUkrmZkQoQ&usqp=CAU)
+![alt text](https://us.123rf.com/450wm/alsstocks450/alsstocks4501911/alsstocks450191100175/136346991-voronezh-russia-november-21-2019-twitter-logo-square-icon-in-blue-color.jpg?ver=6)
 
 ---
 ### Login page
 
 
 ![alt text](https://raw.githubusercontent.com/RajarsiMukherjee/youtube-clone/main/Image/Landing.png)
+![alt text](https://raw.githubusercontent.com/RajarsiMukherjee/youtube-clone/main/Image/Sign%20up.png)
 ---
 ### Home page
 
